@@ -1,0 +1,9 @@
+{
+  "name": "tfg-recognizer",
+  "version": "1.0.0",
+  "description": "A prototype for entity recognition",
+  "main": "index.js",
+  "repository": "git@github.com:exacs/tfg-recognizer.git",
+  "author": "Carlos Saito <c.saito.style@gmail.com>",
+  "license": "MIT"
+}
