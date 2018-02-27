@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-fetch';
 /**
  * Recognize a string as a Wikidata entity performing a simple search.
  *
@@ -13,8 +14,18 @@
  * - String `description`. The description of the concept according to Wikidata
  */
 
-export default function wikidataRecognize (text, link) {
-  // Perform the search
-  // Get the results
-  // Return them
+export default function wikidataRecognize (text /*, link */) {
+  const url =
+    `https://www.wikidata.org/w/api.php` +
+    `?action=wbsearchentities&search=${text}&language=en&props=&format=json`;
+
+  return fetch(url)
+    .then(r => r.json())
+    .then(r => r.search.map(
+      entry => ({
+        uri: entry.concepturi,
+        label: entry.label,
+        description: entry.description
+      })
+    ));
 }

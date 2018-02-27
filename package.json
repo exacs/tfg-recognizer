@@ -5,5 +5,13 @@
   "main": "index.js",
   "repository": "git@github.com:exacs/tfg-recognizer.git",
   "author": "Carlos Saito <c.saito.style@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }
