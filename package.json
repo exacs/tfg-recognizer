@@ -4,6 +4,10 @@
   "description": "A prototype for entity recognition",
   "main": "index.js",
   "repository": "git@github.com:exacs/tfg-recognizer.git",
+  "scripts": {
+    "prettier": "prettier --single-quote --write \"src/**/*.js\"",
+    "eslint": "eslint src/**/*.js"
+  },
   "author": "Carlos Saito <c.saito.style@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -12,6 +16,10 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
+    "prettier": "^1.11.1"
   }
 }
