@@ -14,18 +14,18 @@ import fetch from 'isomorphic-fetch';
  * - String `description`. The description of the concept according to Wikidata
  */
 
-export default function wikidataRecognize (text /*, link */) {
+export default function wikidataRecognize(text /*, link */) {
   const url =
     `https://www.wikidata.org/w/api.php` +
     `?action=wbsearchentities&search=${text}&language=en&props=&format=json`;
 
   return fetch(url)
     .then(r => r.json())
-    .then(r => r.search.map(
-      entry => ({
+    .then(r =>
+      r.search.map(entry => ({
         uri: entry.concepturi,
         label: entry.label,
         description: entry.description
-      })
-    ));
+      }))
+    );
 }

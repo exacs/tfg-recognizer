@@ -4,7 +4,4 @@
 import wikidataRecognize from './recognize/wikidata';
 import psqlInsert from './insert/psql';
 
-export {
-  wikidataRecognize,
-  psqlInsert
-};
+export { wikidataRecognize, psqlInsert };

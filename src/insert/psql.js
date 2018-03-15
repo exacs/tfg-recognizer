@@ -1,1 +1,1 @@
-export default function psqlInsert() {};
+export default function psqlInsert() {}
